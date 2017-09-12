@@ -1,10 +1,13 @@
 syntax on
 filetype indent plugin on
 
+set showcmd showmatch
 set modeline
 set background=dark
+set laststatus=2
+au BufRead,BufNewFile *.md set filetype=markdown
 
-" Highligthing for bad whitespace
+" Highlighting for bad whitespace
 :highlight BadWhitespace ctermbg=red guibg=red
 
 " Flag bad whitespace for code
