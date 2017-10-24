@@ -5,6 +5,9 @@ set showcmd showmatch
 set modeline
 set background=dark
 set laststatus=2
+set incsearch
+set nohlsearch 
+
 au BufRead,BufNewFile *.md set filetype=markdown
 
 " Highlighting for bad whitespace
