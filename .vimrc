@@ -1,4 +1,3 @@
-
 " Remove banner from file browser
 let g:netrw_banner=0
 " tree browser
@@ -7,10 +6,19 @@ let g:netrw_liststyle=3
 " Display all matching files when tab completing
 set wildmenu
 
+" Allow switching non-saved buffers
+set hidden
+
 " Dark background
 set background=dark
 
-" Modeline stuff 
+" Hilight column 80
+set colorcolumn=80
+
+" Show bad whitespace
+set list listchars=tab:├─,trail:·,extends:…,precedes:…,nbsp:␣
+
+" Modeline stuff
 " Read modeline from start of file
 set modeline
 " Always show status
@@ -28,5 +36,3 @@ filetype indent plugin on
 " acknowledge markdown
 au BufRead,BufNewFile *.md set filetype=markdown
 
-" Show bad whitespace
-set list listchars=tab:├─,trail:·,extends:…,precedes:…,nbsp:␣
