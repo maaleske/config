@@ -1,5 +1,9 @@
+" allow recursion in file search
+set path=**
+
 " Remove banner from file browser
 let g:netrw_banner=0
+
 " tree browser
 let g:netrw_liststyle=3
 
