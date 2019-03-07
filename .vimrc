@@ -1,22 +1,32 @@
+
+" Remove banner from file browser
+let g:netrw_banner=0
+" tree browser
+let g:netrw_liststyle=3
+
+" Display all matching files when tab completing
+set wildmenu
+
+" Dark background
+set background=dark
+
+" Modeline stuff 
+" Read modeline from start of file
+set modeline
+" Always show status
+set laststatus=2
+
+" show partial matches, but don't hilight them
+set showcmd showmatch
+set incsearch
+set nohlsearch
+
+" Filetype specific stuff
 syntax on
 filetype indent plugin on
 
-set showcmd showmatch
-set modeline
-set background=dark
-set laststatus=2
-set incsearch
-set nohlsearch 
-
+" acknowledge markdown
 au BufRead,BufNewFile *.md set filetype=markdown
 
-" set list listchars=tab:├─,trail:·,extends:…,precedes:…,nbsp:␣
-
-" Highlighting for bad whitespace
-:highlight BadWhitespace ctermbg=red guibg=red
-
-" Flag bad whitespace for code
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h,*.m,*.hs match BadWhitespace /\s\+$/
-
-" Pathogen plugin management
-execute pathogen#infect()
+" Show bad whitespace
+set list listchars=tab:├─,trail:·,extends:…,precedes:…,nbsp:␣
